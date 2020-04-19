@@ -1,0 +1,101 @@
+// Contextual backgrounds
+
+@mixin bg-inner-variant($themes: 'primary') {
+  $inner-bg: $primary !default;
+  $inner-color: $white !default;
+  $inner-color-type: $white !default;
+  $inner-color-link-hover: $secondary !default;
+  $webkit-box-shadow: rgba(0,0,0,0) !default;
+  $webkit-text-color: $body-color !default;
+
+  @if $themes == 'secondary' {
+    $inner-bg: $secondary;
+    $inner-color: $primary;
+    $inner-color-type: $white;
+    $inner-color-link-hover: $primary;
+  }
+
+  @else if $themes == 'light' {
+    $inner-bg: $light;
+    $inner-color: $primary;
+    $inner-color-type: $primary;
+    $inner-color-link-hover: $secondary;
+  }
+
+  @else if $themes == 'white' {
+    $inner-bg: $light;
+    $inner-color: $body-color;
+    $inner-color-type: $primary;
+    $inner-color-link-hover: $secondary;
+  }
+
+  @else {
+    $inner-bg: $primary;
+    $inner-color: $white;
+    $inner-color-type: $white;
+    $inner-color-link-hover: $secondary;
+    $webkit-box-shadow: $primary;
+    $webkit-text-color: $white;
+
+    .form-type-textfield,
+    .form-type-password,
+    .form-type-email,
+    .form-type-date,
+    .form-type-select {
+      input, select {
+        color: $white;
+        border-color: $white;
+                
+        &::-webkit-input-placeholder {
+          color: $white;
+        }
+        &::-moz-placeholder {
+          color: $white;
+        }
+        &:-ms-input-placeholder {
+          color: $white;
+        }
+        &::placeholder {
+          color: $white;
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active  {
+          -webkit-box-shadow: 0 0 0 30px $webkit-box-shadow inset !important;
+          -webkit-text-fill-color: $webkit-text-color !important;
+          transition: all 999999s;
+        }
+        
+        &:focus {
+          color: $white;
+          border-color: $white;
+        }
+      }
+      
+      option {
+        color: $inner-bg !important;
+      }
+    }
+  }
+
+  & {
+    color: $inner-color;
+    
+  }
+
+  a:not(.btn), 
+  button:not(.btn),
+  input:not(.btn),
+  optgroup,
+  select,
+  textarea {
+    color: $inner-color-type;
+  }
+
+  a:not(.btn):hover,
+  a:not(.btn):focus {
+    color: $inner-color-link-hover;
+  }
+}

@@ -1,0 +1,150 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  padding-bottom: 44px;
+  @include media-breakpoint-up(lg){
+    padding-bottom:0;
+  }
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: $headings-line-height;
+
+}
+
+p {
+  font-weight: $font-weight-light;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-family-base;
+  font-weight: $font-weight-bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-alt-regular;
+  font-weight: $font-weight-normal;
+}
+
+a {
+  color: $primary-states;
+  font-weight: $font-weight-light;
+  @include transitions(0.3s, ease-in-out);
+
+  &:hover,
+  &:focus {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+h1,
+.h1 {
+  line-height: 1.05;
+  margin-bottom: $margin-base-vertical / 2;
+  font-size: 25px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 41px;
+    margin-bottom: $margin-base-vertical * 2;
+
+  }
+
+  small {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    opacity: .8;
+  }
+
+}
+
+h2,
+.h2 {
+  margin-bottom: $margin-base-vertical * 2;
+  line-height: 1.2;
+  font-size: 25px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 36px;
+
+  }
+
+}
+
+h3,
+.h3 {
+  margin-bottom: $margin-base-vertical * 2;
+  line-height: 1.4em;
+}
+
+h4,
+.h4 {
+  line-height: 1.45em;
+  margin-bottom: $margin-base-vertical;
+
+  &+.category,
+  &.title+.category {
+    margin-top: -10px;
+  }
+}
+
+h5,
+.h5 {
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+
+h6,
+.h6 {
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+
+ul li,
+ol li {
+  color: $white;
+}
+
+pre {
+  color: $body-color;
+}
+
+hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+}
+

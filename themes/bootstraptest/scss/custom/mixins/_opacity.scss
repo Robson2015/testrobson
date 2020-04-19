@@ -1,0 +1,23 @@
+// Opacity
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+// hide
+
+@mixin hide() {
+  visibility: hidden;
+  position: absolute !important;
+
+  @include opacity(0);
+
+}
+
+.v-hidden {
+  @include hide();
+
+}

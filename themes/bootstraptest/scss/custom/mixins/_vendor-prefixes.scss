@@ -1,0 +1,122 @@
+@mixin transform-translate-x($value) {
+  -webkit-transform: translate3d($value, 0, 0);
+  -moz-transform: translate3d($value, 0, 0);
+  -o-transform: translate3d($value, 0, 0);
+  -ms-transform: translate3d($value, 0, 0);
+  transform: translate3d($value, 0, 0);
+}
+
+@mixin transform-translate-y($value) {
+  -webkit-transform: translate3d(0, $value, 0);
+  -moz-transform: translate3d(0, $value, 0);
+  -o-transform: translate3d(0, $value, 0);
+  -ms-transform: translate3d(0, $value, 0);
+  transform: translate3d(0, $value, 0);
+}
+
+@mixin transform-translate-z($value) {
+  -webkit-transform: translateZ($value);
+  -moz-transform: translateZ($value);
+  -o-transform: translateZ($value);
+  -ms-transform: translateZ($value);
+  transform: translateZ($value);
+}
+
+@mixin transitions($time, $type) {
+  -webkit-transition: all $time $type;
+  -moz-transition: all $time $type;
+  -o-transition: all $time $type;
+  -ms-transition: all $time $type;
+  transition: all $time $type;
+}
+
+@mixin bar-animation($type) {
+  -webkit-animation: $type 500ms linear 0s;
+  -moz-animation: $type 500ms linear 0s;
+  animation: $type 500ms 0s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@mixin rotate-180() {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+@mixin darrow-floating(){
+  @keyframes darrow-floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0px); }
+  }
+  @-webkit-keyframes darrow-floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0px); }
+  }
+  @-moz-keyframes darrow-floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+@mixin darrow-opacity(){
+  @keyframes darrow-opacity {
+    0% { opacity: 0; }
+    50% { opacity: 0.63; }
+    100% { opacity: 0; }
+  }
+  @-webkit-keyframes darrow-opacity {
+    0% { opacity: 0; }
+    50% { opacity: 0.63; }
+    100% { opacity: 0; }
+  }
+  @-moz-keyframes darrow-opacity {
+    0% { opacity: 0; }
+    50% { opacity: 0.63; }
+    100% { opacity: 0; }
+  }
+}
+
+
+@mixin smooth-scale-lg(){
+  @keyframes smooth-scale-lg {
+    20% { transform: scale(1.1); }
+    70% { transform: scale(1.1) translateY(150px); }
+    100% {transform: scale(0.5) translateY(130px); }
+  }
+  @-webkit-keyframes smooth-scale-lg {
+    20% { transform: scale(1.1); }
+    70% { transform: scale(1.1) translateY(150px); }
+    100% {transform: scale(0.5) translateY(130px); }
+  }
+  @-moz-keyframes smooth-scale-lg {
+    20% { transform: scale(1.1); }
+    70% { transform: scale(1.1) translateY(150px); }
+    100% {transform: scale(0.5) translateY(130px); }
+  }
+}
+
+
+@mixin smooth-scale-sm(){
+  @keyframes smooth-scale-sm {
+    20% { transform: scale(1); }
+    70% { transform: scale(1) translateY(20px); }
+    100% { transform: scale(0.51) translateY(-40px); }
+  }
+  @-webkit-keyframes smooth-scale-sm {
+    20% { transform: scale(1); }
+    70% { transform: scale(1) translateY(20px); }
+    100% { transform: scale(0.51) translateY(-40px); }
+  }
+  @-moz-keyframes smooth-scale-sm {
+    20% { transform: scale(1); }
+    70% { transform: scale(1) translateY(20px); }
+    100% { transform: scale(0.51) translateY(-40px); }
+  }
+}

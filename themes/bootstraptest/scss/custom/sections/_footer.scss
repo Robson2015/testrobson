@@ -1,0 +1,41 @@
+footer[role="contentinfo"], .footer{
+  font-family: $font-family-base-medium;
+  position: relative;
+  width: 100%;
+  z-index: 101;
+
+  .menu {
+    margin: 0;
+    padding: 10px 0 12px;
+    text-align: center;
+
+    @include media-breakpoint-up(lg){
+      text-align: left;
+    }
+    
+    @include media-breakpoint-up(xl) {
+      text-align: center;
+    }
+
+    &-item {
+      display: inline-flex;
+      margin: 0 .25em;
+      padding: 0;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0.35em;
+      }
+    }
+  }
+  a {
+    font-size: 8px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 12px;
+    }
+
+    &.is-active {
+      color: $primary;
+    }
+  }
+}

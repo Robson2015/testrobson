@@ -1,0 +1,37 @@
+@mixin text-color-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @include text-color-variant(".text-#{$color}", $value);
+  
+}
+
+.text {
+  &-underline {
+    text-decoration: underline !important;
+
+  }
+
+  &-accent {
+    font-size: 20px;
+    font-family: $font-family-base;
+    font-weight: bold;
+    
+  }
+}
+
+.title {
+  &-base {
+    font-family: $font-family-base;
+    font-size: 15px;
+    font-weight: bold;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 22px;
+    }
+  }
+}

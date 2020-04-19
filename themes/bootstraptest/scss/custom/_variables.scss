@@ -1,0 +1,119 @@
+$enable-rounded: false;
+$white: #fff;
+$blue: #5FC2E8;
+$blue-1: #0033A0;
+$red: #E8707B;
+$red-1: #DC0014;
+$gray: #707070;
+$light-gray: #c9c9c9;
+$default: $white;
+$body-bg: $white;
+$body-color: $gray;
+$link-color: $blue;
+$transparent-bg: transparent;
+$primary: $blue;
+$secondary: $blue-1;
+$light: #fff;
+$default-states: $white;
+$primary-states: $blue-1;
+$success-states: #0098f0;
+$info-states: #3358f4;
+$warning-states: #ff6491;
+$danger-states: $red-1;
+$black-states: #1d253b;
+// Theme colors override
+$theme-colors: ("body-color": $body-color, "primary": $primary, "secondary": $secondary, "light": $light, "danger": $red);
+// Fonts
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-family-base-light: 'DIN-Light',
+sans-serif;
+$font-family-base-medium: 'DIN-Medium',
+sans-serif;
+$font-family-base-medium: 'DIN-Medium',
+sans-serif;
+$font-family-base-bold: 'DIN-Bold',
+sans-serif;
+$font-family-alt: 'Bebas-Neue',
+sans-serif;
+$font-family-alt-regular: 'Bebas-Neue-Regular',
+sans-serif;
+$font-family-helvetica: 'Helvetica Neue',
+sans-serif;
+$font-kgt: 'KGTurningTables';
+$headings-line-height: 1.2;
+
+$font-size-base:1.4rem;
+// Form
+$input-font-family: $font-family-base;
+$input-color: $blue;
+$input-placeholder-color: $blue;
+$input-focus-color: $blue;
+$input-font-size: 20px;
+$input-bg: $transparent-bg;
+$input-padding-x: 0;
+$input-border-color: $white;
+$input-focus-border-color: $primary;
+// border
+$none: 0;
+$border-thin: 1px;
+$border-thick: 2px;
+$border-width: .0625rem;
+$border: 1px solid;
+// Buttons
+$btn-round-radius: 50%;
+// $btn-padding-y: .825em;
+// $btn-padding-x: 1em;
+$btn-padding-y: 16.5px;
+$btn-padding-x: 20px;
+// Spacing
+$padding-base-vertical: .5rem;
+$padding-base-horizontal: .7rem;
+$padding-btn-vertical: 11px;
+$padding-btn-horizontal: 40px;
+$padding-round-horizontal: 23px;
+$margin-lg-vertical: 30px;
+$margin-base-vertical: 15px;
+// Animations
+$transition-duration: 400ms;
+$transition-timing-function: cubic-bezier(0.01, 0.21, 0.35, 1);
+
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
